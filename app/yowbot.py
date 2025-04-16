@@ -41,6 +41,7 @@ class YowBot:
                     
     def __init__(self,bot_id,env,bot_type=YowBotType.TYPE_RUN_MANUAL):     
         self.botId = bot_id                
+        print(self.botId)
         stackBuilder = YowStackBuilder()
         self.sendLayer = SendLayer(self)        
         self.env = env if env is not None else BotEnv(deviceEnv=DeviceEnv("android"),networkEnv=NetworkEnv("direct"))

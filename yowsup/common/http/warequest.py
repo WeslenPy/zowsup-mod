@@ -10,6 +10,7 @@ import struct
 import base64
 import requests
 import uuid
+from common.utils import Utils
 
 from urllib.parse import quote as urllib_quote
 
@@ -93,6 +94,8 @@ class WARequest(object):
         self.addParam("rc", "0")
         if self._config.id:
             self.addParam("id", self._config.id)
+            
+            
 
         self.env = env
 
@@ -216,7 +219,10 @@ class WARequest(object):
         if not self.response.status_code == WARequest.OK:
             logger.error("Request not success, status was %s" % self.response.status)
             return {}
-        return self.response.json()
+        
+        
+        data= self.response.json()
+        return data
 
     def sendPostRequest(self, parser=None,proxy=None):
         self.response = None

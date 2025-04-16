@@ -13,7 +13,7 @@ class YowProfile(object):
         """
         :param profile_name:  profile name
         :param config: A supplied config will disable loading configs using the Config manager and provide that config
-        instead
+        insteadsr
         """
         logger.debug("Constructed Profile(profile_name=%s)" % profile_name)
         self._profile_name = profile_name
