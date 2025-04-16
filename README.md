@@ -53,7 +53,12 @@ LOG_PATH=/data/log/                       #log path
 DEFAULT_ENV=android                       #default environment
 
 ```
+ * Import account from 5-parts-account-data
 
+```
+ python script/import5.py [5-parts-account-data] --env android             # env : android/smb_android/ios/smb_ios is available without rc2key
+
+```
  * Import account from 6-parts-account-data
 
 ```
